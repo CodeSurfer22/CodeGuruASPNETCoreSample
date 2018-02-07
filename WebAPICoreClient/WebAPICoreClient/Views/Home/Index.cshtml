@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <hgroup class="title">
+        <h2>Raw json data returned from rest api:</h2>
+        <h3>@ViewBag.RawData</h3>
+    </hgroup>
+    <p>
+        <h2>Data returned from rest api deserialized</h2>
+        <div>
+            <table id="t01">
+                <thead>
+                <th>EmployeeID</th>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>City</th>
+                </thead>
+                @foreach (var item in ViewBag.Employees)
+                {
+                    <tr>
+                        <td>
+                            @item.EmployeeID
+                        </td>
+                        <td>
+                            @item.LastName
+                        </td>
+                        <td>
+                            @item.FirstName
+                        </td>
+                        <td>
+                            @item.City
+                        </td>
+                    </tr>
+
+                }
+
+            </table>
+    </p>
+
+
+
+</div>
+
+
+</div>
